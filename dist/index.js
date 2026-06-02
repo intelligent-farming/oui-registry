@@ -2,11 +2,6 @@
 /**
  * Shared IEEE OUI registry for LoRaWAN tooling.
  *
- * Replaces the duplicated OUI loaders previously inlined into
- * `chirpstack-join-watcher` and `lorawan-qr-decoder` — both bundled the same
- * 1.8 MB JSON snapshot of the IEEE Organizationally Unique Identifier
- * registries (MA-L 24-bit, MA-M 28-bit, MA-S 36-bit).
- *
  * The module is split into two layers:
  *
  * - **Pure / isomorphic**: {@link lookup}, {@link parseOuiCsv}, type
