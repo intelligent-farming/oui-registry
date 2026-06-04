@@ -1,4 +1,4 @@
-# @intelligentfarming/oui-registry
+# @intelligent-farming/oui-registry
 
 Shared IEEE OUI registry for LoRaWAN tooling.
 
@@ -22,8 +22,8 @@ The module is split into two layers:
 **Browser usage**
 
 ```ts
-import ouis from '@intelligentfarming/oui-registry/data/ouis.json';
-import { lookup } from '@intelligentfarming/oui-registry';
+import ouis from '@intelligent-farming/oui-registry/data/ouis.json';
+import { lookup } from '@intelligent-farming/oui-registry';
 
 lookup(ouis, 'A84041035660E3AA');
 // → { oui: 'A84041', name: 'Dragino Technology Co., Limited' }
@@ -32,7 +32,7 @@ lookup(ouis, 'A84041035660E3AA');
 **Node usage**
 
 ```ts
-import { detectVendor, updateOuis } from '@intelligentfarming/oui-registry';
+import { detectVendor, updateOuis } from '@intelligent-farming/oui-registry';
 
 detectVendor('A84041035660E3AA');
 // → { oui: 'A84041', name: 'Dragino Technology Co., Limited' }
@@ -151,7 +151,7 @@ sub-allocations under MA-L holders' broader blocks — without longest-prefix
 the lookup would incorrectly report the parent block's owner.
 
 Pure function: takes the registry explicitly. Use this directly in browser
-code with `import data from '@intelligentfarming/oui-registry/data/ouis.json'`.
+code with `import data from '@intelligent-farming/oui-registry/data/ouis.json'`.
 
 #### Parameters
 
