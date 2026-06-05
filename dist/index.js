@@ -14,8 +14,8 @@
  *
  * @example Browser usage
  * ```ts
- * import ouis from '@intelligentfarming/oui-registry/data/ouis.json';
- * import { lookup } from '@intelligentfarming/oui-registry';
+ * import ouis from '@intelligent-farming/oui-registry/data/ouis.json';
+ * import { lookup } from '@intelligent-farming/oui-registry';
  *
  * lookup(ouis, 'A84041035660E3AA');
  * // → { oui: 'A84041', name: 'Dragino Technology Co., Limited' }
@@ -23,7 +23,7 @@
  *
  * @example Node usage
  * ```ts
- * import { detectVendor, updateOuis } from '@intelligentfarming/oui-registry';
+ * import { detectVendor, updateOuis } from '@intelligent-farming/oui-registry';
  *
  * detectVendor('A84041035660E3AA');
  * // → { oui: 'A84041', name: 'Dragino Technology Co., Limited' }
@@ -48,7 +48,7 @@ const HEX16_RE = /^[0-9A-F]{16}$/;
  * the lookup would incorrectly report the parent block's owner.
  *
  * Pure function: takes the registry explicitly. Use this directly in browser
- * code with `import data from '@intelligentfarming/oui-registry/data/ouis.json'`.
+ * code with `import data from '@intelligent-farming/oui-registry/data/ouis.json'`.
  *
  * @param registry The flat OUI map (see {@link OuiRegistry}).
  * @param eui      16-character hex EUI, case-insensitive.
@@ -204,9 +204,9 @@ const nodeApis = () => {
         return { fs: req('fs'), path: req('path'), os: req('os'), https: req('https') };
     }
     catch {
-        throw new Error('@intelligentfarming/oui-registry: this function requires Node.js APIs. ' +
+        throw new Error('@intelligent-farming/oui-registry: this function requires Node.js APIs. ' +
             'In a browser bundle, import the registry data directly and use lookup() instead: ' +
-            `import data from '@intelligentfarming/oui-registry/data/ouis.json'; lookup(data, eui).`);
+            `import data from '@intelligent-farming/oui-registry/data/ouis.json'; lookup(data, eui).`);
     }
 };
 const fetchText = (url) => new Promise((resolve, reject) => {
