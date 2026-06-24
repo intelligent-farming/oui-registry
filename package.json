@@ -1,6 +1,6 @@
 {
   "name": "@intelligent-farming/oui-registry",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "IEEE OUI (Organizationally Unique Identifier) registry for LoRaWAN device vendor identification. Ships a bundled MA-L/MA-M/MA-S snapshot; supports refreshing from IEEE at runtime (Node) and direct JSON import (browser). Replaces the duplicated OUI loaders previously inlined into chirpstack-join-watcher and lorawan-qr-decoder.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
